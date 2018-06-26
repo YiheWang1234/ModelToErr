@@ -3,6 +3,7 @@ import numpy as np
 #import sys
 #sys.path.append("../data_provider")
 #sys.path.append("../yihewang1234/data_provider")
+#import roarbot.data.m4datasource as m4datasource
 import m4datasource
 import json
 
@@ -10,8 +11,10 @@ import json
 class ModelToError:
 
     def __init__(self, model="missing", dataset="M4", name="Hourly", random_time="2018-08-31 19:00:00", n_train=500, p=20,
-                 start_train="2018-10-31 19:00:00", end_train="2018-11-01 19:00:00", end_test="2018-11-02 19:00:00",
-                 err_method="MAE"):
+                 start_train="2018-10-31 19:00:00", end_train="2018-11-30 19:00:00", end_test="2018-12-05 19:00:00",
+                 err_method="MAE", packages=["from statsmodels.tsa.arima_model import ARIMA"]):
+        for i in packages:
+            exec(i, globals())
 
         if model == 'missing':
             self.model = self.default_model
@@ -66,9 +69,10 @@ class ModelToError:
 
 
 def model_to_error(model="missing", dataset="M4", name="Hourly", random_time="2018-08-31 19:00:00", n_train=500, p=20,
-                   start_train="2018-10-31 19:00:00", end_train="2018-11-01 19:00:00", end_test="2018-11-02 19:00:00",
-                   err_method="MAE"):
+                   start_train="2018-10-31 19:00:00", end_train="2018-11-30 19:00:00", end_test="2018-12-05 19:00:00",
+                   err_method="MAE", packages=["from statsmodels.tsa.arima_model import ARIMA"]):
     model_err = ModelToError(model=model, dataset=dataset, name=name, random_time=random_time, n_train=n_train, p=p,
-                             start_train=start_train, end_train=end_train, end_test=end_test, err_method=err_method)
+                             start_train=start_train, end_train=end_train, end_test=end_test, err_method=err_method,
+                             packages=packages)
 
     return json.dumps({"err": model_err.err, "err curve": model_err.err_curve.tolist()[0][1:]})

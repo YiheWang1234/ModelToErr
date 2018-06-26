@@ -7,11 +7,11 @@ from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.arima_model import ARIMA
 import inspect
 
-
 def local_model_to_err(model="missing", dataset="M4", name="Hourly",
                        random_time="2018-08-31 19:00:00", n_train=500, p=5,
                        start_train="2018-10-31 19:00:00", end_train="2018-11-30 19:00:00",
-                       end_test="2018-12-05 19:00:00", err_method="MAE"):
+                       end_test="2018-12-05 19:00:00", err_method="MAE",
+                       packages = ["from statsmodels.tsa.arima_model import ARIMA"]):
 
     if not model == "missing":
         model = inspect.getsource(model)
@@ -25,11 +25,12 @@ def local_model_to_err(model="missing", dataset="M4", name="Hourly",
                                  "data": {"model": model, "dataset": dataset, "name": name,
                                           "random_time": random_time, "n_train": n_train, "p": p,
                                           "start_train": start_train, "end_train": end_train,
-                                          "end_test": end_test, "err_method": err_method}
+                                          "end_test": end_test, "err_method": err_method,
+                                          "packages": packages}
                              }
                              )
     return pd.read_json(json.loads(response.content)["result"])
-
+    return response.content
 
 def mymodel(data_train, n_test):
     n = data_train.shape[0]
@@ -49,7 +50,7 @@ def mymodel(data_train, n_test):
     return pd.DataFrame(output)
 
 
-result = local_model_to_err(model=mymodel, p=10)
+result = local_model_to_err(model=mymodel, p=10, packages=["from statsmodels.tsa.arima_model import ARIMA"])
 err = result.iloc[0, 0]
 print(err)
 err_curve = result.iloc[:, 1]
