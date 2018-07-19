@@ -1,0 +1,37 @@
+[TerminalIPythonApp] WARNING | Subcommand `ipython notebook` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter notebook` in the future
+[I 14:15:16.305 NotebookApp] Copying /home/ubuntu/.ipython/kernels -> /home/ubuntu/.local/share/jupyter/kernels
+[I 14:15:16.308 NotebookApp] Copying /home/ubuntu/.ipython/profile_default/static/custom/custom.js -> /home/ubuntu/.jupyter/custom/custom.js
+[W 14:15:16.312 NotebookApp] Config option `base_kernel_url` not recognized by `NotebookApp`.  Did you mean one of: `base_project_url, base_url`?
+[I 14:15:16.318 NotebookApp] Writing notebook server cookie secret to /home/ubuntu/.local/share/jupyter/runtime/notebook_cookie_secret
+[W 14:15:16.343 NotebookApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 14:15:16.352 NotebookApp] Serving notebooks from local directory: /
+[I 14:15:16.352 NotebookApp] 0 active kernels
+[I 14:15:16.352 NotebookApp] The Jupyter Notebook is running at:
+[I 14:15:16.352 NotebookApp] http://172.17.0.3:8888/yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/
+[I 14:15:16.352 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 14:15:17.689 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.194.105) 0.81ms
+[I 14:15:20.929 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.194.105) 0.50ms
+[I 14:15:21.126 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.194.105) 0.50ms
+[I 14:15:21.944 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.40.19) 0.45ms
+[I 14:15:22.180 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.254.176) 0.53ms
+[I 14:16:31.748 NotebookApp] Writing notebook-signing key to /home/ubuntu/.local/share/jupyter/notebook_secret
+[W 14:16:31.749 NotebookApp] Notebook mnt/yihewang1234/ModelToError/Intro_model_to_err.ipynb is not trusted
+[I 14:16:32.074 NotebookApp] Kernel started: b4cae36e-15a2-4309-856d-548f636920df
+[I 14:16:32.605 NotebookApp] Adapting to protocol v5.1 for kernel b4cae36e-15a2-4309-856d-548f636920df
+[I 14:18:03.654 NotebookApp] Saving file at /mnt/yihewang1234/ModelToError/Intro_model_to_err.ipynb
+[I 14:18:58.972 NotebookApp] Starting buffering for b4cae36e-15a2-4309-856d-548f636920df:702e3216607344eb908c49c8da9614db
+[W 14:19:01.678 NotebookApp] Notebook mnt/yihewang1234/ModelToError/Intro_data_provider.ipynb is not trusted
+[I 14:19:01.909 NotebookApp] Kernel started: bf987e0b-dd42-4bcb-8b00-558f9c7c3942
+[I 14:19:02.441 NotebookApp] Adapting to protocol v5.1 for kernel bf987e0b-dd42-4bcb-8b00-558f9c7c3942
+[I 14:21:02.159 NotebookApp] Saving file at /mnt/yihewang1234/ModelToError/Intro_data_provider.ipynb
+[I 14:21:20.823 NotebookApp] Saving file at /mnt/yihewang1234/ModelToError/Intro_data_provider.ipynb
+[I 14:21:26.320 NotebookApp] Starting buffering for bf987e0b-dd42-4bcb-8b00-558f9c7c3942:f36dc281d72848ed82bd0d40d0586948
+[I 14:27:47.724 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.194.105) 0.54ms
+[I 14:28:01.086 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.40.19) 0.50ms
+[I 14:28:01.288 NotebookApp] 302 GET /yihewang1234/ModelToError/notebookSession/5b363ed8e4b0941477d6a25e/ (10.0.40.19) 0.53ms
+[I 14:28:22.868 NotebookApp] Adapting to protocol v5.1 for kernel bf987e0b-dd42-4bcb-8b00-558f9c7c3942
+[I 14:28:26.183 NotebookApp] Saving file at /mnt/yihewang1234/ModelToError/Intro_data_provider.ipynb
+[I 14:28:37.984 NotebookApp] Starting buffering for bf987e0b-dd42-4bcb-8b00-558f9c7c3942:bf4a3b26e59843f68b79f11efff51f0e
+[I 14:28:45.591 NotebookApp] Kernel shutdown: b4cae36e-15a2-4309-856d-548f636920df
+[I 14:28:46.954 NotebookApp] Kernel shutdown: bf987e0b-dd42-4bcb-8b00-558f9c7c3942
